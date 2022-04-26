@@ -1,20 +1,25 @@
 import { Link } from 'react-router-dom';
 
+// Styled Components
+import { StyledNavbar, StyledNavBrand, StyledNavItem, StyledNavLink, StyledAccent } from '../styled';
+
 const Navbar = () => {
   return (
-    <nav>
-      <div>
+    <StyledNavbar>
+      <StyledNavBrand>
         <Link to='/'>
-          Learn.Build.<span>Type</span>
+          Learn.Build.<StyledAccent>Type</StyledAccent>
         </Link>
-      </div>
-      <ul>
+      </StyledNavBrand>
+      <StyledNavItem>
         <li>
-          <Link to='/'>Home</Link>
-          <Link to='/high-scores'>High Scores</Link>
+          <StyledNavLink to='/'>Home</StyledNavLink>
         </li>
-      </ul>
-    </nav>
+        <li>
+          <StyledNavLink to='/high-scores'>High Scores</StyledNavLink>
+        </li>
+      </StyledNavItem>
+    </StyledNavbar>
   );
 };
 export default Navbar;
